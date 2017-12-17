@@ -29,7 +29,7 @@ app.get('/get/tweets',
         var twitter = getTwitterAuthentification();
 
         var appDirectPromise = new Promise((resolve, reject) => {
-            twitter.getUserTimeline({screen_name: 'AppDirect', count: '2'},
+            twitter.getUserTimeline({screen_name: 'AppDirect', count: '30'},
                 function(error) {reject(error)},
                 function(data) {
                     resolve(JSON.parse(data));
@@ -37,7 +37,7 @@ app.get('/get/tweets',
         });
 
         var laughingSquidPromise = new Promise((resolve, reject) => {
-            twitter.getUserTimeline({screen_name: 'LaughingSquid', count: '2'},
+            twitter.getUserTimeline({screen_name: 'LaughingSquid', count: '30'},
                 function(error) {reject(error)},
                 function(data) {
                     resolve(JSON.parse(data));
@@ -45,7 +45,7 @@ app.get('/get/tweets',
         });
 
         var techCrunchPromise = new Promise((resolve, reject) => {
-            twitter.getUserTimeline({screen_name: 'TechCrunch', count: '2'},
+            twitter.getUserTimeline({screen_name: 'TechCrunch', count: '30'},
                 function(error) {reject(error)},
                 function(data) {
                     resolve(JSON.parse(data));

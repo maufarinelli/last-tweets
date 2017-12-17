@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TweetsList from '../TweetsList/TweestList';
+import './tweetsGrid.css';
 
 class TweetsGrid extends Component {
     constructor(props) {
@@ -24,9 +25,9 @@ class TweetsGrid extends Component {
 
     render() {
         return (
-            <div className="pure-g">
-                {this.state.list.map(tweetList => {
-                    return <TweetsList list={tweetList} />
+            <div className="grid">
+                {this.state.list.map((tweetList, index) => {
+                    return <TweetsList list={tweetList} key={index} />
                 })}
             </div>
         );

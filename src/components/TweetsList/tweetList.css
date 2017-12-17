@@ -1,0 +1,10 @@
+.grid-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+@media all and (min-width: 768px) {
+    .grid-item {
+        grid-row: 1;
+    }
+}

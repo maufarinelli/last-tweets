@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './tweet.css';
 
 const Tweet = ({tweet}) => (
-    <li>
-        <img src={tweet.user.profile_image_url} alt={tweet.user.name} />
-        <h1>{tweet.user.name}</h1>
-        <p>{tweet.created_at}</p>
+    <li className="tweet">
+        <div className="tweet-header">
+            <img src={tweet.user.profile_image_url} alt={tweet.user.name} />
+            <h1>{tweet.user.name}</h1>
+        </div>
+        <small>{tweet.created_at}</small>
         <p>{tweet.text}</p>
     </li>
 );

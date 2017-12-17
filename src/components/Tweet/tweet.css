@@ -1,0 +1,33 @@
+.tweet {
+    padding: 10px;
+    border-bottom: 1px solid #999;
+}
+
+.tweet:last-child {
+    border-bottom: none;
+}
+
+.tweet:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.tweet small {
+    color: #666;
+}
+
+.tweet-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet-header h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.tweet-header img {
+    align-self: flex-start;
+    margin-right: 10px;
+}
