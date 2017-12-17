@@ -1,0 +1,14 @@
+{
+  "name": "last-tweets-BE",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Mauricio Farinelli",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "request": "2.81.0",
+    "twitter-node-client": "0.0.6"
+  }
+}
