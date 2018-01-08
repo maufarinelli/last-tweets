@@ -5,5 +5,6 @@ Last Tweets apps
     - cd server - npm install at the server folder
 
 - To run
+    - take the config.env
     - cd server, then: $ node index.js
     - at the root: $ yarn start
