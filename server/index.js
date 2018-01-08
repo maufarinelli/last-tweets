@@ -1,4 +1,6 @@
 'use strict';
+var env = require('node-env-file');
+env(__dirname + '/config.env');
 
 var express = require('express'),
     cors = require('cors'),
@@ -65,11 +67,11 @@ app.get('/get/tweets',
 
 var getTwitterAuthentification = () => {
     var config = {
-        "consumerKey": "hDnIoCTxaPGxUdLfHJcufoAsz",
-        "consumerSecret": "ohkoOU1FcAHt17GbRuI7gu8h7FxUzSat6nA07s1EtmIr4PPiWb",
-        "accessToken": "219427823-rxZPdxREQAhUcPh78FlOFCXl8A3n0oViA1yfwTXO",
-        "accessTokenSecret": "11m2GygY2M4TAO1B6bv0xzZMHE101QJ3SmPVR9PtzvRlV",
-        "callBackUrl": "hppt://localhost:3000/twitter-callback"
+        "consumerKey": process.env.consumerKey,
+        "consumerSecret": process.env.consumerSecret,
+        "accessToken": process.env.accessToken,
+        "accessTokenSecret": process.env.accessTokenSecret,
+        "callBackUrl": process.env.callBackUrl
     };
     return new Twitter(config);
 };
